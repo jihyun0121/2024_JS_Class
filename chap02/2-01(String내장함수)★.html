@@ -1,0 +1,132 @@
+<html>
+<head>
+    <title>String 내장 함수</title>
+</head>
+<body>
+    <script>
+        /*
+        // length : 문자열의 길이를 리턴
+        var txt = "부로 말하자면.. 그가 바로 부 자체이다.";
+        console.log(txt.length);
+
+        // ifdexOf
+        var str = "Please locate where 'locate'";
+        // console.log(str)
+        console.log(str.indexOf('locate')); //7
+        console.log(str.indexOf('choi')); //-1  (찾는 단어가 없다)
+
+        if(str.indexOf("locate") > -1){
+            console.log("locate 문자 발견");
+        }
+
+        // lastIndexOf
+        console.log(str.lastIndexOf("locate")); //21
+
+        // search
+        console.log(str.search("locate"))   //7
+
+        //slice     --중요!!
+        var str = "Apple, Banana, Kiwi";
+        console.log(str.slice(7,13));         //7부터 12(13-1)까지
+        console.log(str.slice(7));            //7부터 끝까지
+        console.log(str.slice(-12, -6));      //-12부터 -5까지
+        console.log(str.slice(-12));          //-12부터 끝까지
+
+        //substring
+        console.log(str.substring(7, 13));
+
+        //substr
+        console.log(str.substr(7, 6))
+
+        var jumin1 = "070121";
+        console.log(jumin1.substr(0,2));
+        console.log(jumin1.substr(2,2));
+        console.log(jumin1.substr(4,2));
+
+        var jumin2 = "07-01-21";
+        console.log(jumin2.substring(0,jumin2.indexOf("-")));
+
+        //replace
+        var str1 = "Pleas visit here";
+        var str2 = str1.replace("here", "ther");
+        console.log(str2);
+        
+        var str3 = "Pleas visit here here here";    //맨 앞에만 바뀜
+        var str4 = str3.replace("here", "ther");
+        console.log(str4);
+
+        //정규표현식
+        var str5 = "Pleas visit here here here";
+        var str6 = str5.replace(/here/g, "ther");  //g : global : 전부 변경
+        console.log(str6);
+
+        var str7 = "Pleas visit Here HERE here";
+        var str8 = str7.replace(/here/gi, "ther");  //g : ignore : 대소문자 무시
+        console.log(str8);
+        
+        //대문자로
+        var str9 = "Pleas visit Here HERE here";
+        console.log(str9.toUpperCase());
+
+        //소문자로
+        var str10 = "Pleas visit Here HERE here";
+        console.log(str10.toLowerCase());
+        
+        
+        //데이터베이스 : JOHN, john, John
+        var text1 = "Hello";
+        var text2 = "World";
+        var text3 = txt1 + "" + text2
+
+        console.log(txt3);
+        console.log(txt3.concat(", txt2"));
+        console.log(txt3.concat(" ", "Hug", " Love", txt2));
+
+        //padStart
+        var str11 = "1234";
+        // console,length(str11.padStart(8,0));
+        console,length("C-".str11.padsStrat(8,0));
+        
+
+        //특정 자릿수를 통일하기 위해서 사용
+        var str12 = "5";
+        var str12 = "15";
+        console.log(str12.padStart(2, 0))
+
+        var str12 = "5";
+        var str12 = "15";
+        console.log(str12.padEnd(4, 0))
+
+        //charAt()
+        var str13 = "Hello World";
+        console.log(str13.charAt(0));
+        
+
+        //Split ★★★★★
+        var tags = "키보드 기계식 블루투스 휠마우스 광마우스";
+        var arr1 = tags.split(" ");
+        console.log(arr1);
+        
+        
+        var birthday = "2007-01-21";
+        var arr2 = birthday.split("-");
+        console.log(arr2);
+        */
+
+        //parseInt()
+        // console.log(parseInt("10"));
+        // console.log(parseInt("3.0"));
+        // console.log(parseInt("10 20 30"));
+        // console.log(parseInt("24 years old"));
+        
+        // // console.log(parseInt("years 24 old"));    //NaN
+
+        //parseFloat()
+        console.log(parseFloat("10"));
+        console.log(parseFloat("13.9"));
+        console.log(parseFloat("13.9 choi"));
+
+
+    </script>
+</body>
+</html>
