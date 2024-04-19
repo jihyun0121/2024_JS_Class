@@ -53,6 +53,7 @@
         // fruits4[fruits4.length -1] = "Peach"
         // console.log(fruits4);
 
+        // //★
         // //splice(a,b) : a = 시작 위치, b = 삭제할 항목  //삭제, 추가 가능
         // var fruits5 = ["Banana", "Orange", "Apple"];
         // fruits5.splice(1, 2);
@@ -85,13 +86,13 @@
 
         // // points.sort(function(a, b){
         // //     if(a>b)
-        // //         return 1;   //return true
+        // //         return 1;   //return true     //오름차순 정렬
         // //     else
-        // //         return -1;  //return false
+        // //         return -1;  //return false    //내림차순 정렬
         // // });
 
         // points.sort(function(a, b) {
-        //     return b - a;
+        //     return b - a;        //return a - b;
         // });
 
         // console.log(points)
@@ -100,13 +101,14 @@
 
         // //Object 정렬
         // var persons = [
-        //     {name: "유재석", point:78},
+        //     {name: "유재석", point:78},  //object 객체
         //     {name: "김종국", point:92},
         //     {name: "양세찬", point:76},
         //     {name: "하 하", point:81}
         // ];
 
         // console.log(persons.sort())    //정렬안됨
+
         // persons.sort(function(a, b){
         //     if (a.point > b.point)
         //         return 1;
@@ -148,7 +150,8 @@
         // });
         // console.log(seoul);
 
-        //★★★★★ reduce
+        // //★★★★★
+        // //reduce
         // var arr3 = [1, 2, 3, 4];
         // var total = 0;
         // for(var x of arr3){
@@ -161,14 +164,25 @@
         //a : accumulator = 누산기
         //c : currentValue = 현재값
 
-        var arr4 = [1, 2, 3, 4];
-        var total = arr4.reduce(function(a, c){
-            return a + c;
-        });
-        console.log(total);
+        // var arr4 = [1, 2, 3, 4];
+        // var total = arr4.reduce(function(a, c){
+        //     return a + c;
+        // });
+        // console.log(total);
 
-        //map()
+        // // map()
+        // var userList = [
+        //     {firstName:"재석", lastName:"유", email:"yu@gamil.com"},
+        //     {firstName:"종국", lastName:"김", email:"kim@gamil.com"},
+        //     {firstName:"세찬", lastName:"양", email:"yang@gamil.com"},
+        //     {firstName:"석진", lastName:"지", email:"ji@gamil.com"},
+        // ];
 
+        // var userList2 = userList.map(function(user){
+        //    return {fullName:user.firstName + user.lastName, fN:user.firstName, lN:user.lastName} 
+        // });
+
+        // console.log(userList2);
     </script>
 
 </body>
