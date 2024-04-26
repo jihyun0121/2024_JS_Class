@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(s){
+            let answer = 0;
+
+            // // 방법1 : toupperCase
+            // for(let i of s){
+            //     if(i === i.toUpperCase()){
+            //         answer++;
+            //     }
+            // }
+
+            // 방법2 : 아스키코드를 이용
+            for(let i of s){
+                var num = i.charCodeAt();
+                if(num >= 65 && num <= 90){
+                    answer++;
+                }
+            }
+            
+            return answer;
+        }
+        let str = "KoreaTimeGood";
+        console.log(solution(str));
+    </script>
+</body>
+</html>

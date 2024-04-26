@@ -3,7 +3,7 @@
     <title>Date 내장함수</title>
 </head>
 <body>
-    <script>
+    <script <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js">
         // var d1 = new Date();
         // console.log(d1)
 
@@ -49,6 +49,66 @@
         // 2024.04.19 06:06:10 (영국) 2024.04.19 15:06:10 (한국)
         // 한국 시간대를 자동으로 영국 기준시로 변경해서 저장해야함
         // 서버에 접속한 국가는 각각의 시간대를 +해야함
+
+        // var d4 = new Date();
+        // console.log(d4.getTimezoneOffset());    //출력값(분 단위) -540분 => 9시간 차이
+        // console.log(d4)
+
+        // //특정 날짜와 시간을 조정
+        // var d5 = new Date();
+        // d5.setFullYear(2007);
+        // d5.setMonth(0);
+        // d5.sed(21);
+        // console.log(d5);
+
+    console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+    console.log(moment().format('ddd'));
+    
+    //오늘을 기준으로 
+    console.log(moment().format('YYYY-Y-mm'));
+    console.log(moment().format('MM-DD-YYYY'));
+
+    //오늘의 100일후는 언제
+    console.log(moment().format('YYYY-Y-mm'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </script>
 </body>
