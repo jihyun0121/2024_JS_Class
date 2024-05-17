@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>대문자 변환</title>
+</head>
+<body>
+    <script>
+        function solution(s){
+            let answer = "";
+
+            ////방법1 : toLowerCase(), toUpperCase()함수
+            // for(let i of s){
+            //     if(i === i.toLowerCase()){
+            //         answer += i.toUpperCase();
+            //     } else {
+            //         answer += i;
+            //     }
+            // }
+
+            //방법2 : 아스키코드 이용
+            for(let x of s){
+                // console.log(x);
+                num = x.charCodeAt();
+                if(num >= 97 && num <= 122){
+                    answer += String.fromCharCode(num-32);;
+                } else{
+                    answer += x;
+                }
+            }
+
+            return answer;
+        }
+        let str = "ItisTimetoStudy"
+        // console.log(str.toUpperCase());
+        console.log(solution(str));
+    </script>
+</body>
+</html>

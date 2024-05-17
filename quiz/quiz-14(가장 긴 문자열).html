@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(s){
+            let answer="";
+            
+            for(let i of s){
+                console.log(i)
+                if(i.length() < answer.length()){
+                    answer = i;
+                }
+            }
+            
+            return answer;
+        }
+        let str = ["teacher", "time", "student", "beutiful", "good"];
+        console.log(solution(str));
+    </script>
+</body>
+</html>
