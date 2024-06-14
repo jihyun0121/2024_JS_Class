@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Crome 개발자 도구</title>
+</head>
+<body>
+    <script>
+        // console.log("미림마이스터고");      //출력값
+        // console.info("미림마이스터고");     //정보 (=주석)
+
+        // console.warn("미림마이스터고");     //경고
+        // console.error("미림마이스터고");    //에러
+
+
+        var uselist = [
+            {firstName:"재석", lastName:"유", email:"yu@gamil.com"},
+            {firstName:"종국", lastName:"김", email:"kim@gamil.com"},
+            {firstName:"세찬", lastName:"양", email:"yang@gamil.com"},
+            {firstName:"석진", lastName:"지", email:"ji@gamil.com"}
+        ];
+        
+        console.log(uselist);
+        console.table(uselist);
+
+        function a(){
+            console.time();
+
+            //insert code
+
+            console.timeEnd();
+        }
+
+        // // 실행까지 걸리는 시간 
+        // console.time();
+        // for(let i = 1; i <= 1000000; i++){
+        //     console.log("사랑해요 : " + i);
+        // }
+        // console.timeEnd();
+
+        //출력값의 style을 지정할 수 있음 - css전용
+        console.log("안녕하세요? %c미림마이스터고 학생여러분.", "color:yellow; background-color:blue; padding: 4px;")
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -5,15 +5,15 @@
 <body>
     <script>
         function solution(s){
-            let answer="";
+            let answer="", max = Number.MIN_SAFE_INTEGER;
             
             for(let i of s){
-                console.log(i)
-                if(i.length() < answer.length()){
+                // console.log(i)
+                if(i.length > max){
+                    max = i.length;
                     answer = i;
                 }
             }
-            
             return answer;
         }
         let str = ["teacher", "time", "student", "beutiful", "good"];

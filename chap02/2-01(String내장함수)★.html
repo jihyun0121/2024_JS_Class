@@ -4,7 +4,7 @@
 </head>
 <body>
     <script>
-        /*
+        
         // length : 문자열의 길이를 리턴
         var txt = "부로 말하자면.. 그가 바로 부 자체이다.";
         console.log(txt.length);
@@ -25,17 +25,17 @@
         // search : 특정 문자 위치 찾기 (정규식 사용 가능)
         console.log(str.search("locate"))   //7
 
-        //slice ★★★
+        //slice ★★★ : 문자열 자르기
         var str = "Apple, Banana, Kiwi";
         console.log(str.slice(7,13));         //7부터 12(13-1)까지
         console.log(str.slice(7));            //7부터 끝까지
         console.log(str.slice(-12, -6));      //-12부터 -5까지
         console.log(str.slice(-12));          //-12부터 끝까지
 
-        //substring
+        //substring : 문자열을 시작과 종료 인덱스로 삼을 경우
         console.log(str.substring(7, 13));
 
-        //substr
+        //substr : 문자열의 일부를 일정 길이만큼 잘라내기
         console.log(str.substr(7, 6))
 
         var jumin1 = "070121";
@@ -61,7 +61,7 @@
         console.log(str6);
 
         var str7 = "Pleas visit Here HERE here";
-        var str8 = str7.replace(/here/gi, "ther");  //g : ignore : 대소문자 무시
+        var str8 = str7.replace(/here/gi, "ther");  //i : ignore : 대소문자 무시
         console.log(str8);
         
         //대문자로
@@ -71,27 +71,28 @@
         //소문자로
         var str10 = "Pleas visit Here HERE here";
         console.log(str10.toLowerCase());
-        
+        //
         
         //데이터베이스 : JOHN, john, John
         var text1 = "Hello";
         var text2 = "World";
-        var text3 = txt1 + "" + text2
+        var text3 = text1 + "" + text2;
 
-        console.log(txt3);
-        console.log(txt3.concat(", txt2"));
-        console.log(txt3.concat(" ", "Hug", " Love", txt2));
+        console.log(text3);
+        console.log(text3.concat(", text2"));
+        console.log(text3.concat(" ", "Hug", " Love", text2));
 
-        //padStart
+        //padStart : 길이를 정하고 빈 공간을 앞에서부터 숫자로 채움
+        //padEnd : 길이를 정하고 빈 공간을 뒤에서부터 숫자로 채움
         var str11 = "1234";
-        // console,length(str11.padStart(8,0));
-        console,length("C-".str11.padsStrat(8,0));
+        console.log(str11.padStart(8,0));
+        console.log("C-",str11.padStart(8,0));
         
-
+        
         //특정 자릿수를 통일하기 위해서 사용
         var str12 = "5";
         var str12 = "15";
-        console.log(str12.padStart(2, 0))
+        console.log(str12.padStart(4, 0))
 
         var str12 = "5";
         var str12 = "15";
@@ -111,15 +112,15 @@
         var birthday = "2007-01-21";
         var arr2 = birthday.split("-");
         console.log(arr2);
-        */
+        
 
         //parseInt()
-        // console.log(parseInt("10"));
-        // console.log(parseInt("3.0"));
-        // console.log(parseInt("10 20 30"));
-        // console.log(parseInt("24 years old"));
+        console.log(parseInt("10"));
+        console.log(parseInt("3.0"));
+        console.log(parseInt("10 20 30"));
+        console.log(parseInt("24 years old"));
         
-        // // console.log(parseInt("years 24 old"));    //NaN
+        console.log(parseInt("years 24 old"));    //NaN
 
         //parseFloat()
         console.log(parseFloat("10"));
