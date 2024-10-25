@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>회문 문자열 구하기</title>
+</head>
+<body>
+    <script>
+        function solution(str){
+            let answer = "Yes";
+            let len = str.length;
+            str = str.toLowerCase();
+            
+            //방법 1 : 직접 비교 방식
+            // for(let i = 0; i < Math.floor(len / 2); i++){
+            //     if(str[i] !== str[len - i - 1]) answer = "No";
+            // }
+
+            //방법 2 : reverse()합수 이용
+            if(str.split('').reverse('').join('') !== str)
+                answer = "No";
+
+            return answer;
+        }
+        
+        let str = "gooG"
+        console.log(solution(str));
+    </script>
+</body>
+</html>
