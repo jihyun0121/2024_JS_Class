@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>회문 문자열 구하기</title>
+</head>
+<body>
+    <script>
+        function solution(str){
+            let answer = "Yes";
+            str = str.toLowerCase().replace(/[^a-z]/g,"");            
+
+            if(str.split('').reverse('').join('') !== str)
+                answer = "No";
+
+            return answer;
+        }
+        
+        let str = "found77, time^ study, Yduts; emit, 9Dnuof";
+        console.log(solution(str));
+    </script>
+</body>
+</html>

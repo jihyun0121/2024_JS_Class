@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>회문 문자열 구하기</title>
+</head>
+<body>
+    <script>
+        function solution(str){
+            let answer = "";
+            //1
+            answer = Number(str.replace(/[^0-9]/g,""));
+            
+            // //2
+            // for(let x of str) {
+            //     if(!isNaN(x)){
+            //         answer += x;
+            //     }
+            // }
+            
+            // //3
+            // for(let x of str) {
+            //     if(!isNaN(x)){
+            //         answer = answer * 10 + Number(x);
+            //     }
+            // }
+
+            // return parseInt(str);
+            // return Number(answer);
+            return answer;
+        }
+        
+        let str = "g0en2T0s8eSoft";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
