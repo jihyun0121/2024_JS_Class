@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>정규 표현식 (Regular Expression)_</title>
+</head>
+<body>
+    <script>
+        // 정규 표현식 형식 : /Pattern/modifier
+        // var patt = /word/ig;
+
+        // var str1 = "Hello World";
+        // console.log(str1.search("world"));
+        // console.log(str1.search(/world/));
+        // console.log(str1.search(/world/i));     // i : 대소문자 구분 x
+
+
+        // var str2 = "Hello WORLD!, world";
+        // console.log(str2.replace("World", "Home"))
+        // console.log(str2.replace(/World/i, "Home"))
+        // console.log(str2.replace(/World/ig, "Home"))    // g : 전부 다 교체
+
+
+        // var patt = /World/ig;
+        // var str3 = "Hello WORLD!, world";
+        // console.log(str3.replace(patt, "Hong"));
+
+
+        // var str4 = "Is this all there WORLD! world";
+        // var patt1 = /[hat]/g;
+        // var result1 = str4.match(patt1);
+        // console.log(result1.join(''));
+
+
+        // var str5 = "d0ue54y6tyf22rdew3s46gc50j76tuyfdu32trey"
+        // var patt2 = /[0-9]/g;    // 0-9 사이의 모든 숫자를 찾음
+        // var result2 = str5.match(patt2);
+        // // console.log(result2)
+        // console.log(parseInt(result2.join('')))
+
+
+        // var str6 = "re, green, red, gree, gen, red, blue, yellow";
+        // var patt3 = /(red|green)/g;
+        // var result3 = str6.match(patt3);
+        // console.log(result3);
+
+        
+        // // \d : 숫자
+        // var str7 = "Please Call 119 Hurry Up";
+        // var patt4 = /\d/g;
+        // var result4 = str7.match(patt4);
+        // console.log(result4);
+
+
+        // // \s : 공백
+        // var str8 = "Please Call 119 Hurry Up";
+        // var patt5 = /\s/g;
+        // var result5 = str8.match(patt5);
+        // console.log(result5);
+
+
+        // // \b : 시작하는 단어를 찾음
+        // var str9 = "HELLO, LOOK AT ME";
+        // var patt6 = /\bLO/g;
+        // var result6 = str9.match(patt6);
+        // console.log(result6);
+
+
+        // //n+ : n이 최소한 1개 이상 (one or more)
+        // var str10 = "HellooOo";
+        // var patt7 = /o+/g;
+        // console.log(str10.match(patt7));
+
+        
+        // // n* : n이 zero or more
+        // var str11 = "HellooOo World";
+        // var patt8 = /lo*/g;
+        // console.log(str11.match(patt8));
+
+
+        // // n? : zero or one
+        // var str12 = "1, 10 and 1000 or 1111";
+        // var patt9 = /10?/g;
+        // console.log(str12.match(patt9))
+    </script>
+</body>
+</html>
