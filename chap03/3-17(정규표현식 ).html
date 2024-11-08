@@ -80,6 +80,29 @@
         // var str12 = "1, 10 and 1000 or 1111";
         // var patt9 = /10?/g;
         // console.log(str12.match(patt9))
+
+        // // 실무 예 : 우편번호 5자리 (유효성체크)
+        // // 32543 : 다섯자리인지 판별, 다섯자리 모두가 숫자인지 판별
+        // var patt13 = /\d{5}/;
+        // // var postalCode = "23452";    //true
+        // var postalCode = "P234521111";       //false여야하지만 true
+        // console.log(patt13.test(postalCode));
+
+        // var patt14 = /^\d{5}$/;
+        // // var postalCode = "23452";    //true
+        // var postalCode = "P234521111";       //false
+        // console.log(patt14.test(postalCode));
+
+        // // 핸드폰 번호 : 010-1234-5678
+        // var patt15 = /^(010)-\d{4}-\d{4}$/;
+        // var tel = '010-2154-2189';
+        // console.log(patt15.test(tel));
+
+        // 이메일 주소 : gtgyujung@gmali.com
+        var patt15 = /^\w+([._-]?\w+)*@\w+(.\w{2, 3})+5/;
+        var tel = 's2306@e-mirim.hs.kr';
+        console.log(patt15.test(tel));
+
     </script>
 </body>
 </html>
