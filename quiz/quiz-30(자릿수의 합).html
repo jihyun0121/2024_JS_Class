@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>자릿수의 합</title>
+</head>
+<body>
+    <script>
+        function solution(arr) {
+            let answer = 0, max = Number.MIN_SAFE_INTEGER, n = 0;
+            
+
+            for (let i of arr) {
+                n = i.toString().split('').reduce((a, b) => a + parseInt(b), 0);
+                
+                // console.log(n)
+
+                if (n > max) {
+                    max = n;
+                    answer = i;
+                } else if (n === max && i > answer) {
+                    answer = i;
+                }
+            }
+            
+            return answer;
+        }
+
+        let arr = [7, 460, 128, 60, 40, 521, 137, 123, 1200];
+        console.log(solution(arr));
+    </script>
+</body>
+</html>

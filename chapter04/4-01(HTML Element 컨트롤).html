@@ -19,7 +19,14 @@
     <input type="radio" name="gen" id="man"> 남자
     <input type="radio" name="gen" id="woman"> 여자
     <br>
+    Select : 
     <br>
+    <select name="select1" id="">
+        <option value="KO">대한민국</option>
+        <option value="CH">중국</option>
+        <option value="JP">일본</option>
+    </select>
+
     <input type="button" onclick="choi()" value="클릭">
 
     <script>
@@ -47,13 +54,20 @@
             //         console.log(check_box[i].value)
             // }
 
-            // jQuery 방식
-            var check_box = document.querySelectorAll("[name = chk]:checked")
-            console.log(check_box);
+            // // jQuery 방식
+            // var check_box = document.querySelectorAll("[name = chk]:checked")
+            // console.log(check_box);
             
-            for(var i = 0; i < check_box.length; i++){
-                console.log(check_box[i].value);
-            }
+            // for(var i = 0; i < check_box.length; i++){
+            //     console.log(check_box[i].value);
+            // }
+
+            // JQuery 방식
+            var radido = document.querySelector("[name=gen]:checked");
+            console.log(radido.valuek)
+
+            // var select = document.getElementById("select1");
+
         }
     </script>
 </body>
