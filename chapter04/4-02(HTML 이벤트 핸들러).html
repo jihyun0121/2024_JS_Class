@@ -5,19 +5,57 @@
 <body>
     focus: blur;
     <br>
-    <input type="text" id="text1">
+    <input type="text" id="text1" onfocus="doFoucus()" onblur="doBlur(this)">
     <br>
     <br>
-
+    select : 
+    <select id="select1" onchange="doChange(this)">
+        <option value="KO">한국</option>
+        <option value="CH">중국</option>
+        <option value="JP">일본</option>
+    </select>
+    <br>
+    <br>
     <input type="button" value="클릭" onclick="doClick()">
-
+    <br>
+    <br>
+    KeyDown :
+    <br>
+    <input type="text" id="text2" onkeydown="doKeyDown()">
+    <input type="button" value="조회">
 
     <script>
         function doClick(){
             alert("[버튼] 클릭");
         }
 
+        function dofoucus(){
+            console.log("doFoucus() 호출 ")
+        }
 
+        function doblur(obj){
+            console.log.log("doblur() 호출")
+            if(obj.value === "0"){
+                alert("내용을 입력해주세요.");
+            }
+        }
+
+        function doChange(){
+            console.log(obj.value);
+        }
+
+        function doKeyDown(){
+            // console.log("doKeyDown() 호출")
+            // console.log(event);
+            if(event.keycode === 13){
+                // console.log("[엔터] 클릭")
+                doSerch();
+            }
+        }
+
+        function doSerch(){
+            console.log("조회를 시작합니다.")
+        }
     </script>
 </body>
 </html>
