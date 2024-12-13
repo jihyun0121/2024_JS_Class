@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>데이터 테이블 만들기</title>
+</head>
+<body>
+
+    <input type="text" id="searchTxt" onkeydown="checkEnter(event)">
+    <input type="button" value="조회" onclick="doSearch()">
+
+    <br>
+    <br>
+
+    <table id="tb" border="1">
+        <thead>
+            <tr>
+                <th onclick="doSort('name')">이름</th>
+                <th onclick="doSort('email')">이메일</th>
+                <th onclick="doSort('company')">회사</th>
+                <th onclick="doSort('address')">주소</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <script src="/scripts/4-04.user_data.js"></script>
+    
+    <script>
+
+        function doSearch() {
+            var search_txt = document.getElementById("searchTxt").value;
+            // console.log(search_txt)
+
+            if(search_txt===""){
+                // alert("아무것도 입력하지 않음")
+                currentData = userList;
+                renderTable(userList);
+            } else{
+                // alert("무언가 내용을 입력함")
+                // console.log(search_txt);
+                var regExp = new RegExp(search_txt, "i");
+                var data = userList.filter(item => {
+                    if(regExp.test(item.name))
+                        return true;
+                    else if(regExp.test(item.email))
+                        return true;
+                    else if(regExp.test(item.company))
+                        return true;
+                    else if(regExp.test(item.address))
+                        return true;
+                    else
+                        return false;
+                });
+                currentData = data;
+                renderTable(data)
+            }
+        }   //doSearch(
+
+        function renderTable(data) {
+            var h = [];
+            data.forEach(item => {
+                h.push(`<tr>`);
+                h.push(`<td>${item.name}</td>`);
+                h.push(`<td>${item.email}</td>`);
+                h.push(`<td>${item.company}</td>`);
+                h.push(`<td>${item.address}</td>`);
+                h.push(`<tr>`);
+            });
+
+            document.querySelector("#tb>tbody").innerHTML = h.join("");
+        }
+
+        function checkEnter(event){
+            // console.log(event)
+            if(event.keyCode === 13) doSearch()
+        }
+
+        function doSort(key){
+            // console.log(key);
+            var currentData = [];
+
+            currentData.sort(function(a, b) {
+                return (a[key] > b[key]) ? 1 : a[key] < b[key] ? -1 : 0;
+            });
+
+            //삼항연산자
+            //(조건1) ? true : (조건2) ? true : false;
+
+            renderTable(currentData)
+        }
+    </script>
+</body>
+</html>
